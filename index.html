@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 简历润色</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.3.136/pdf.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <span class="badge">AI Resume Polish</span>
+      <h1>上传简历，一键获取建议与润色版本</h1>
+      <p>支持 PDF 简历。系统自动读取内容，生成结构化建议，并提供润色后的版本供你快速优化。</p>
+      <div class="hero-actions">
+        <label class="upload-button">
+          上传 PDF 简历
+          <input id="resume-upload" type="file" accept="application/pdf" />
+        </label>
+        <button id="demo-button" class="ghost">使用示例内容</button>
+      </div>
+      <p id="upload-status" class="status">请选择文件开始。</p>
+    </div>
+    <div class="hero-card">
+      <div class="card-row">
+        <span>解析完成</span>
+        <strong id="page-count">0</strong>
+      </div>
+      <div class="card-row">
+        <span>建议数量</span>
+        <strong id="suggestion-count">0</strong>
+      </div>
+      <div class="card-row">
+        <span>润色摘要</span>
+        <strong id="summary-count">0</strong>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>原始内容预览</h2>
+      <div id="raw-text" class="panel-body empty">上传 PDF 后自动显示内容。</div>
+    </section>
+
+    <section class="panel">
+      <h2>优化建议</h2>
+      <ul id="suggestions" class="panel-body empty">
+        <li>等待解析结果。</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>润色后的简历片段</h2>
+      <div id="polished" class="panel-body empty">润色内容将在这里展示。</div>
+    </section>
+
+    <section class="panel">
+      <h2>下一步</h2>
+      <div class="panel-body">
+        <ol>
+          <li>补充关键指标（如效率提升、收入增长、用户数）。</li>
+          <li>统一动词与时态，突出可量化成果。</li>
+          <li>结合目标岗位关键词进行定制。</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>提示：所有内容仅在本地浏览器处理。</span>
+  </footer>
+</body>
+</html>
