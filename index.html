@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+  <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Resume Polish</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.3.136/pdf.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <span class="badge">AI Resume Polish</span>
+      <h1>Upload your resume and get instant suggestions</h1>
+      <p>Upload a PDF resume to extract content, generate structured suggestions, and receive a polished version in seconds.</p>
+      <div class="hero-actions">
+        <label class="upload-button">
+          Upload PDF Resume
+          <input id="resume-upload" type="file" accept="application/pdf" />
+        </label>
+        <button id="demo-button" class="ghost">Use Sample Content</button>
+      </div>
+      <p id="upload-status" class="status">Select a PDF to get started.</p>
+    </div>
+    <div class="hero-card">
+      <div class="card-row">
+        <span>Pages Parsed</span>
+        <strong id="page-count">0</strong>
+      </div>
+      <div class="card-row">
+        <span>Suggestions</span>
+        <strong id="suggestion-count">0</strong>
+      </div>
+      <div class="card-row">
+        <span>Polish Summary</span>
+        <strong id="summary-count">0</strong>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Original Content Preview</h2>
+      <div id="raw-text" class="panel-body empty">Upload a PDF to see the extracted content.</div>
+    </section>
+
+    <section class="panel">
+      <h2>Improvement Suggestions</h2>
+      <ul id="suggestions" class="panel-body empty">
+        <li>Waiting for parsing results.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Polished Resume Snippet</h2>
+      <div id="polished" class="panel-body empty">Polished content will appear here.</div>
+    </section>
+
+    <section class="panel">
+      <h2>Next Steps</h2>
+      <div class="panel-body">
+        <ol>
+          <li>Add measurable metrics (e.g., efficiency gains, revenue growth, user impact).</li>
+          <li>Use consistent verbs and tense, highlighting quantifiable outcomes.</li>
+          <li>Tailor keywords to the target role.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Tip: All processing happens locally in your browser.</span>
+  </footer>
+</body>
+</html>
